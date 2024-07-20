@@ -16,7 +16,7 @@ export class IsReferralCodeValid implements ValidatorConstraintInterface {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async validate(referralCode: string, _args: ValidationArguments) {
     const user = await this.userService.findByReferralCode(referralCode);
-    return !user;
+    return !!user;
   }
 
   defaultMessage(validationArguments?: ValidationArguments): string {

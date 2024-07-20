@@ -1,5 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
+import { IsReferralCodeUserValid } from 'src/validators/referral.code.exist.validator';
 import { IsUsernameUserAlreadyExist } from 'src/validators/username.unique.validator';
 
 export class RegisterDto {
@@ -18,6 +19,7 @@ export class RegisterDto {
 
   @IsString()
   @IsOptional()
+  @IsReferralCodeUserValid()
   @ApiPropertyOptional({
     type: String,
   })
