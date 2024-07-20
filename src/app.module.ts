@@ -8,6 +8,7 @@ import { IsUsernameAlreadyExist } from './validators/username.unique.validator';
 import { UserModule } from './modules/users/user.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { IsReferralCodeValid } from './validators/referral.code.exist.validator';
+import { PurchaseModule } from './modules/purchase/purchase.module';
 
 const validators: Provider[] = [IsUsernameAlreadyExist, IsReferralCodeValid];
 
@@ -25,6 +26,7 @@ const validators: Provider[] = [IsUsernameAlreadyExist, IsReferralCodeValid];
     }),
     UserModule,
     AuthenticationModule,
+    PurchaseModule,
   ],
   controllers: [AppController],
   providers: [AppService, ...validators],

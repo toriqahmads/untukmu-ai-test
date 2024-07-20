@@ -15,4 +15,5 @@ export interface IUserService
   findByReferralCode(referralCode: string): Promise<UserEntity>;
   findReferrer(referrer: number): Promise<UserEntity>;
   isUsernameExist(username: string, excluded_id?: number): Promise<boolean>;
+  updateEarning(userId: number, earnings: number): Promise<boolean>;
 }

@@ -15,7 +15,7 @@ export function paginate<T>(
       total_page,
       current_page: page,
       next_page: page < total_page ? page + 1 : null,
-      prev_page: total_page > page && page > 1 ? page - 1 : null,
+      prev_page: total_page >= page && page > 1 ? page - 1 : null,
     },
   };
 

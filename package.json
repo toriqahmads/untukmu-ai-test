@@ -82,7 +82,37 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "test-config",
+      "jestGlobalMocks.ts",
+      ".module.ts",
+      ".contants.ts",
+      "<rootDir>/main.ts",
+      "<rootDir>/configs",
+      "<rootDir>/entities",
+      "<rootDir>/database",
+      "<rootDir>/interfaces",
+      "<rootDir>/interceptors",
+      "<rootDir>/exception.filters",
+      "<rootDir>/guards",
+      "<rootDir>/shared/validation.pipe",
+      "<rootDir>/shared/helpers/upload",
+      ".strategy.ts",
+      ".mock.ts"
+    ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^src/(.*)": "<rootDir>/$1"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }

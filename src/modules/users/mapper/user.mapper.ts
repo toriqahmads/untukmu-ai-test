@@ -47,6 +47,14 @@ export class UserMapper
     if (findAllDto.refferalCode) {
       where.referralCode = findAllDto.refferalCode;
     }
+    if (findAllDto.referredBy) {
+      where.referredBy = {
+        username: Like(`%${findAllDto.referredBy}%`),
+      };
+    }
+    if (findAllDto.referrerId !== undefined) {
+      where.referrer = Number(findAllDto.referrerId);
+    }
 
     payload.where = where;
 
@@ -57,10 +65,6 @@ export class UserMapper
     return {
       where: {
         userId: id,
-      },
-      relations: {
-        referredBy: true,
-        referrals: true,
       },
       relationLoadStrategy: 'join',
     };

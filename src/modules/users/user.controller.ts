@@ -44,6 +44,13 @@ export class UserController {
     return this.userService.findById(id);
   }
 
+  @Get(':id/referrals')
+  findReferrals(@Param('id') id: number) {
+    const findAllDto = new FindAllUserDto();
+    findAllDto.referrerId = id;
+    return this.userService.findAll(findAllDto);
+  }
+
   @Patch(':id')
   update(@Param('id') id: number, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.updateById(id, updateUserDto);

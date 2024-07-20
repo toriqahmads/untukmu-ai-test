@@ -36,6 +36,16 @@ export class UserService
     }
   }
 
+  async updateEarning(userId: number, earnings: number): Promise<boolean> {
+    try {
+      const entity = await this.repository.update(userId, { earnings });
+
+      return Promise.resolve(entity.affected > 0);
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
   async findByUsername(username: string): Promise<UserEntity> {
     try {
       const where = this.mapper.toFindOneByUsername(username);
