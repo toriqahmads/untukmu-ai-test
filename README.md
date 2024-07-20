@@ -113,187 +113,187 @@ You can visit http://localhost:${yourport}/api-docs for complete API Documentati
     ```
 
   3. Get USERS
-    - METHOD: `GET`
-    - URL: `/v1/users`
-    - HEADER: 
-    ```
-    Authorization: Bearer ${token}
-    Content-Type: application/json
-    ```
-    - QUERY:
-    ```
-    page: number (optional)
-    limit: number (optional)
-    username: string (optional) username of user
-    referralCode: string (optional) referralCode of user
-    referredBy: string (optional) username of referrer
-    referrerId: number(optional) userId of referrer
-    ```
-    - RESPONSE:
-    ```json
-    {
-      "code": 200,
-      "success": true,
-      "message": "success",
-      "data": {
-        "list": [
-          {
-            "createdAt": "2024-07-20T06:30:23.000Z",
-            "updatedAt": "2024-07-20T07:57:21.000Z",
-            "deletedAt": null,
-            "userId": 1,
-            "username": "toriqahmads",
-            "referralCode": "CXYK0A",
-            "referrer": null,
-            "earnings": 15000
-          },
-          {
-            "createdAt": "2024-07-20T06:47:52.000Z",
-            "updatedAt": "2024-07-20T07:57:21.000Z",
-            "deletedAt": null,
-            "userId": 2,
-            "username": "toriq",
-            "referralCode": "1LWDIK",
-            "referrer": 1,
-            "earnings": 40000
-          },
-          {
-            "createdAt": "2024-07-20T07:51:55.000Z",
-            "updatedAt": "2024-07-20T07:51:55.000Z",
-            "deletedAt": null,
-            "userId": 3,
-            "username": "tor",
-            "referralCode": "R1GQ8J",
-            "referrer": 2,
-            "earnings": 0
-          },
-          {
-            "createdAt": "2024-07-20T12:09:29.000Z",
-            "updatedAt": "2024-07-20T12:09:29.000Z",
-            "deletedAt": null,
-            "userId": 4,
-            "username": "untukmu",
-            "referralCode": "VTICER",
-            "referrer": 2,
-            "earnings": 0
-          }
-        ],
-        "pagination": {
-          "total_data": 4,
-          "per_page": 25,
-          "total_page": 1,
-          "current_page": 1,
-          "next_page": null,
-          "prev_page": null
-        }
-      }
-    }
-    ```
+     - METHOD: `GET`
+     - URL: `/v1/users`
+     - HEADER: 
+     ```
+     Authorization: Bearer ${token}
+     Content-Type: application/json
+     ```
+     - QUERY:
+     ```
+     page: number (optional)
+     limit: number (optional)
+     username: string (optional) username of user
+     referralCode: string (optional) referralCode of user
+     referredBy: string (optional) username of referrer
+     referrerId: number(optional) userId of referrer
+     ```
+     - RESPONSE:
+     ```json
+     {
+       "code": 200,
+       "success": true,
+       "message": "success",
+       "data": {
+         "list": [
+           {
+             "createdAt": "2024-07-20T06:30:23.000Z",
+             "updatedAt": "2024-07-20T07:57:21.000Z",
+             "deletedAt": null,
+             "userId": 1,
+             "username": "toriqahmads",
+             "referralCode": "CXYK0A",
+             "referrer": null,
+             "earnings": 15000
+           },
+           {
+             "createdAt": "2024-07-20T06:47:52.000Z",
+             "updatedAt": "2024-07-20T07:57:21.000Z",
+             "deletedAt": null,
+             "userId": 2,
+             "username": "toriq",
+             "referralCode": "1LWDIK",
+             "referrer": 1,
+             "earnings": 40000
+           },
+           {
+             "createdAt": "2024-07-20T07:51:55.000Z",
+             "updatedAt": "2024-07-20T07:51:55.000Z",
+             "deletedAt": null,
+             "userId": 3,
+             "username": "tor",
+             "referralCode": "R1GQ8J",
+             "referrer": 2,
+             "earnings": 0
+           },
+           {
+             "createdAt": "2024-07-20T12:09:29.000Z",
+             "updatedAt": "2024-07-20T12:09:29.000Z",
+             "deletedAt": null,
+             "userId": 4,
+             "username": "untukmu",
+             "referralCode": "VTICER",
+             "referrer": 2,
+             "earnings": 0
+           }
+         ],
+         "pagination": {
+           "total_data": 4,
+           "per_page": 25,
+           "total_page": 1,
+           "current_page": 1,
+           "next_page": null,
+           "prev_page": null
+         }
+       }
+     }
+     ```
 
   4. Get USER BY ID
-    - METHOD: `GET`
-    - URL: `/v1/users/${id}`
-    - HEADER: 
-    ```
-    Authorization: Bearer ${token}
-    Content-Type: application/json
-    ```
-    - PARAM:
-    ```
-    id: userId of user
-    ```
-    - RESPONSE:
-    ```json
-    {
-      "code": 200,
-      "success": true,
-      "message": "success",
-      "data": {
-        "createdAt": "2024-07-20T06:30:23.000Z",
-        "updatedAt": "2024-07-20T07:57:21.000Z",
-        "deletedAt": null,
-        "userId": 1,
-        "username": "toriqahmads",
-        "referralCode": "CXYK0A",
-        "referrer": null,
-        "earnings": 15000
-      }
-    }
-    ```
+     - METHOD: `GET`
+     - URL: `/v1/users/${id}`
+     - HEADER: 
+     ```
+     Authorization: Bearer ${token}
+     Content-Type: application/json
+     ```
+     - PARAM:
+     ```
+     id: userId of user
+     ```
+     - RESPONSE:
+     ```json
+     {
+       "code": 200,
+       "success": true,
+       "message": "success",
+       "data": {
+         "createdAt": "2024-07-20T06:30:23.000Z",
+         "updatedAt": "2024-07-20T07:57:21.000Z",
+         "deletedAt": null,
+         "userId": 1,
+         "username": "toriqahmads",
+         "referralCode": "CXYK0A",
+         "referrer": null,
+         "earnings": 15000
+       }
+     }
+     ```
 
   5. Get Referrals of USER by ID
-    - METHOD: `GET`
-    - URL: `/v1/users/${id}/referrals`
-    - HEADER: 
-    ```
-    Authorization: Bearer ${token}
-    Content-Type: application/json
-    ```
-     - PARAM:
-    ```
-    id: userId of user
-    ```
-    - RESPONSE:
-    ```json
-    {
-      "code": 200,
-      "success": true,
-      "message": "success",
-      "data": {
-        "list": [
-          {
-            "createdAt": "2024-07-20T06:47:52.000Z",
-            "updatedAt": "2024-07-20T07:57:21.000Z",
-            "deletedAt": null,
-            "userId": 2,
-            "username": "toriq",
-            "referralCode": "1LWDIK",
-            "referrer": 1,
-            "earnings": 40000
+      - METHOD: `GET`
+      - URL: `/v1/users/${id}/referrals`
+      - HEADER: 
+      ```
+      Authorization: Bearer ${token}
+      Content-Type: application/json
+      ```
+      - PARAM:
+      ```
+      id: userId of user
+      ```
+      - RESPONSE:
+      ```json
+      {
+        "code": 200,
+        "success": true,
+        "message": "success",
+        "data": {
+          "list": [
+            {
+              "createdAt": "2024-07-20T06:47:52.000Z",
+              "updatedAt": "2024-07-20T07:57:21.000Z",
+              "deletedAt": null,
+              "userId": 2,
+              "username": "toriq",
+              "referralCode": "1LWDIK",
+              "referrer": 1,
+              "earnings": 40000
+            }
+          ],
+          "pagination": {
+            "total_data": 1,
+            "per_page": 25,
+            "total_page": 1,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null
           }
-        ],
-        "pagination": {
-          "total_data": 1,
-          "per_page": 25,
-          "total_page": 1,
-          "current_page": 1,
-          "next_page": null,
-          "prev_page": null
         }
       }
-    }
-    ```
+      ```
   
   6. Create Purchase
-    - METHOD: `POST`
-    - URL: `/v1/purchases`
-    - HEADER: 
-    ```
-    Authorization: Bearer ${token}
-    Content-Type: application/json
-    ```
-     - BODY:
-    ```json
-    {
-      "amount": "number"
-    }
-    ```
-    - RESPONSE:
-    ```json
-    {
-      "code": 201,
-      "success": true,
-      "message": "success",
-      "data": {
-        "amount": 1000,
-        "userId": 2,
-        "createdAt": "2024-07-20T12:18:25.000Z",
-        "updatedAt": "2024-07-20T12:18:25.000Z",
-        "deletedAt": null,
-        "purchaseId": 4
-      }
-    }
-    ```
+     - METHOD: `POST`
+     - URL: `/v1/purchases`
+     - HEADER: 
+     ```
+     Authorization: Bearer ${token}
+     Content-Type: application/json
+     ```
+      - BODY:
+     ```json
+     {
+       "amount": "number"
+     }
+     ```
+     - RESPONSE:
+     ```json
+     {
+       "code": 201,
+       "success": true,
+       "message": "success",
+       "data": {
+         "amount": 1000,
+         "userId": 2,
+         "createdAt": "2024-07-20T12:18:25.000Z",
+         "updatedAt": "2024-07-20T12:18:25.000Z",
+         "deletedAt": null,
+         "purchaseId": 4
+       }
+     }
+     ```
 
 7. Get Purchases
     - METHOD: `GET`
